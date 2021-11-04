@@ -40,10 +40,6 @@ namespace Joystic
 
             Console.WriteLine("Found Joystick/Gamepad with GUID: {0}", joystickGuid);
 
-            // Query all suported ForceFeedback effects
-            var allEffects = joystick.GetEffects();
-            foreach (var effectInfo in allEffects)
-                Console.WriteLine("Effect available {0}", effectInfo.Name);
 
             // Set BufferSize in order to use buffered data.
             joystick.Properties.BufferSize = 128;
